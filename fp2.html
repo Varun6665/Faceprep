@@ -3,14 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Website</title>
+    <title>Face Prep</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            
+        }
+
+        body {
+            background-color: rgb(192, 239, 210);
         }
 
         header {
@@ -19,7 +24,7 @@
             align-items: center;
             padding: 15px 30px;
             background: white;
-            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 50px 80px 200px rgba(0, 0, 0, 0.1);
         }
 
         .logo img {
@@ -28,15 +33,17 @@
 
         .menu-icon {
             font-size: 24px;
-            cursor: pointer;
+            cursor: progress;
+            background-color: rgb(250, 250, 250);
         }
 
         .hero {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 50px;
-            border-radius: 20px;
+            padding: 80px;
+            border-radius: 50px;
+            
         }
 
         .hero-content {
@@ -63,18 +70,20 @@
             margin: 20px 0;
         }
 
-        button {
+        .btn {
             background: orange;
             color: white;
             border: none;
             padding: 10px 20px;
             font-size: 16px;
             cursor: pointer;
-            border-radius: 5px;
+            border-radius: 9px;
+            transition: all 0.3s ease-in-out;
         }
 
-        button:hover {
-            background: darkorange;
+        .btn:hover {
+            background-color: rgb(96, 212, 69);
+            transform: scale(1.1);
         }
 
         .hero-image {
@@ -89,7 +98,6 @@
             object-fit: cover;
         }
 
-       
         .features {
             display: flex;
             justify-content: space-around;
@@ -141,6 +149,39 @@
                 margin-bottom: 20px;
             }
         }
+
+        
+        .menu-container {
+            display: flex;
+            overflow-x: auto; 
+            gap: 15px; 
+            padding: 10px;
+            background: rgb(255, 255, 255);
+            border-radius: 10px;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px; 
+            scroll-behavior: smooth;
+            white-space: nowrap;
+        }
+
+        .menu-container img {
+            width: 250px; 
+            height: 150px; 
+            border-radius: 42%;
+            object-fit: cover;
+            transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+        }
+
+        .menu-container img:hover {
+            transform: scale(1.1); 
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); 
+        }
+
+        .menu h2 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
     </style>
 </head>
 <body>
@@ -161,8 +202,20 @@
             <span class="discount">50% Off on All Products</span>
             <h1>Enjoy Your Delicious Food</h1>
             <p>Embrace a new era of Computer Science education at FACE Prep Campus, where we redefine degrees for the modern world. Follow us on social media for up-to-date Career Guidance, Scholarships, Expert Interviews, Program Insights, and help shape the next generation of computer science leaders.</p>
-            <button>Explore Now</button>
+            <button class="btn">Explore Now</button>
         </div>
     </section>
 
+    <section class="menu">
+        <h2>Our Special Menu</h2>
+        <div class="menu-container">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRz0LOlhj8Lc3267xKP3N12yxFAGL-EUSu1Q&s" alt="Food 1">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5UfD4Uip3RWiIj9IgUWmlsJ1uyHHpTSQiDg&s" alt="Food 2">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0U_Sz8Njc1ECoy12yQc0ktwu986lR_mSpXg&s" alt="Food 3">
+            <img src="https://www.holidify.com/blog/wp-content/uploads/2016/08/Mango_Pulihora.jpg" alt="Food 4">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjNWgihZGrjVZiNbYIr5o9h2AfA7viLSKRMQ&s" alt="Food 5">
+        </div>
+    </section>
 
+</body>
+</html>
